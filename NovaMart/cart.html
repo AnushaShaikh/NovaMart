@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link 
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>NovaMart</title>
+</head>
+<body>
+
+    <header class="bg-orange-400 py-3 relative w-full z-50 shadow-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16 items-center">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#" class="flex title-font font-medium items-center text-orange-600 mb-4 md:mb-0">
+              <span class="ml-3 text-4xl">NovaMart</span>
+            </a>
+          </div>
+  
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex space-x-8 ml-auto mr-4">
+            <a href="index.html" class="text-white font-medium hover:text-[orange]">Home</a>
+            <a href="shop.html" class="text-white font-medium hover:text-[orange]">Shop</a>
+            <a href="blog.html" class="text-white font-medium hover:text-[orange]">Blog</a>
+            <a href="contact.html" class="text-white font-medium hover:text-[orange]">Contact</a>
+          </div>
+  
+          <!-- Action Icon (Shopping Cart) - Visible in all views -->
+          <div class="flex space-x-8 ml-4">
+            <a href="cart.html" class="text-white hover:text-[orange]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+                <path d="M3 3.75A.75.75 0 0 1 3.75 3h1.585c.566 0 1.054.397 1.183.952L7.164 7.5h13.086a.75.75 0 0 1 .719.954l-1.5 6a.75.75 0 0 1-.719.546H8.587l-.375 1.5h11.288a.75.75 0 0 1 0 1.5H7.5a.75.75 0 0 1-.728-.927l.93-3.727L4.9 5.25H3.75a.75.75 0 0 1-.75-.75ZM8.25 21a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Zm9 0a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0Z" />
+              </svg>
+            </a>
+          </div>
+  
+          <!-- Hamburger Icon -->
+          <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="text-white focus:outline-none">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="menu bg-orange-600 max-h-0 overflow-hidden md:hidden">
+        <a href="index.html" class="block px-4 py-2 text-white font-medium hover:text-[orange]">Home</a>
+        <a href="shop.html" class="block px-4 py-2 text-white font-medium hover:text-[orange]">Shop</a>
+        <a href="blog.html" class="block px-4 py-2 text-white font-medium hover:text-[orange]">Blog</a>
+        <a href="contact.html" class="block px-4 py-2 text-white font-medium hover:text-[orange]">Contact</a>
+      </div>
+    </header>
+    
+    <section id="banner">
+      <h2 class="text-2xl lg:text-3xl font-bold mb-6">#cart</h2>
+      <p class="mb-8 text-lg">Add you coupon code & SAVE up to 70%!</p>
+    </section>
+    
+    <div class="overflow-x-auto">
+        <table id="cart" class="cart-table w-full max-w-5xl mx-auto border-collapse text-xs">
+            <thead>
+                <tr>
+                    <th class="col-remove py-4 px-2 border-b font-bold uppercase text-center">Remove</th>
+                    <th class="col-image py-4 px-2 border-b font-bold uppercase text-center">Image</th>
+                    <th class="col-product py-4 px-2 border-b font-bold uppercase text-center">Product</th>
+                    <th class="col-price py-4 px-2 border-b font-bold uppercase text-center">Price</th>
+                    <th class="col-quantity py-4 px-2 border-b font-bold uppercase text-center">Quantity</th>
+                    <th class="col-subtotal py-4 px-2 border-b font-bold uppercase text-center">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-center">
+                    <td class="py-4 px-4"><i class="fas fa-times-circle text-red-500 cursor-pointer text-lg"></i></td>
+                    <td class="product-image py-4 px-4"><img src="products/f1.jpg" alt="Cartoon Astronaut T-Shirt" class="w-12 h-auto mx-auto"></td>
+                    <td class="product-name text-left text-sm py-4 px-4">Cartoon Astronaut T-Shirts</td>
+                    <td class="price text-sm whitespace-nowrap py-4 px-4">$118.19</td>
+                    <td class="quantity py-4 px-4"><input type="number" value="1" min="1" class="w-12 text-center border rounded"></td>
+                    <td class="subtotal text-sm whitespace-nowrap py-4 px-4">$118.19</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="py-4 px-4"><i class="fas fa-times-circle text-red-500 cursor-pointer text-lg"></i></td>
+                    <td class="product-image py-4 px-4"><img src="products/f2.jpg" alt="Cartoon Astronaut T-Shirt" class="w-12 h-auto mx-auto"></td>
+                    <td class="product-name text-left text-sm py-4 px-4">Cartoon Astronaut T-Shirts</td>
+                    <td class="price text-sm whitespace-nowrap py-4 px-4">$118.19</td>
+                    <td class="quantity py-4 px-4"><input type="number" value="1" min="1" class="w-12 text-center border rounded"></td>
+                    <td class="subtotal text-sm whitespace-nowrap py-4 px-4">$118.19</td>
+                </tr>
+                <tr class="text-center">
+                    <td class="py-4 px-4"><i class="fas fa-times-circle text-red-500 cursor-pointer text-lg"></i></td>
+                    <td class="product-image py-4 px-4"><img src="products/f3.jpg" alt="Cartoon Astronaut T-Shirt" class="w-12 h-auto mx-auto"></td>
+                    <td class="product-name text-left text-sm py-4 px-4">Cartoon Astronaut T-Shirts</td>
+                    <td class="price text-sm whitespace-nowrap py-4 px-4">$118.19</td>
+                    <td class="quantity py-4 px-4"><input type="number" value="1" min="1" class="w-12 text-center border rounded"></td>
+                    <td class="subtotal text-sm whitespace-nowrap py-4 px-4">$118.19</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    
+    <section id="cart-total" class="mb-16">
+        <div class="flex flex-col md:flex-row justify-between items-start max-w-5xl mx-auto mt-8 space-y-8 md:space-y-0 md:space-x-8">
+            
+            <!-- Apply Coupon Section -->
+            <div id="coupon" class="w-full md:w-1/2 px-4">
+                <h2 class="text-lg font-bold mb-4">Apply Coupon</h2>
+                <div class="flex items-center space-x-2">
+                    <input type="text" placeholder="Enter Your Coupon" class="border rounded-lg p-2 flex-grow w-full md:w-auto">
+                    <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Apply</button>
+                </div>
+            </div>
+    
+            <!-- Cart Totals Section -->
+            <div id="total" class="w-full md:w-1/3 px-4">
+                <h2 class="text-lg font-bold mb-8">Cart Totals</h2>
+                <div class="flex justify-between text-sm mb-2">
+                    <span>Cart Subtotal</span>
+                    <span>$335</span>
+                </div>
+                <div class="flex justify-between text-sm mb-2">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="flex justify-between text-lg font-bold">
+                    <span>Total</span>
+                    <span>$335</span>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+      
+    <footer class="footer">
+              <div class="container">
+      
+                <div class="footer-section">
+                  <h2 class="footer-logo">NovaMart</h2>
+                  <h4>Contact</h4>
+                  <p><strong>Address:</strong> 562 Wellington Road, Street 32, San Francisco</p>
+                  <p><strong>Phone:</strong> +01 2222 365 / (+91) 01 2345 6789</p>
+                  <p><strong>Hours:</strong> 10:00 - 18:00, Mon - Sat</p>
+              </div>
+      
+                  <div class="footer-section">
+                      <h4>About Us</h4>
+                      <ul>
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Delivery Information</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                          <li><a href="#">Terms & Conditions</a></li>
+                          <li><a href="#">Contact Us</a></li>
+                      </ul>
+                  </div>
+      
+                  <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="#">View Cart</a></li>
+                        <li><a href="#">My Wishlist</a></li>
+                        <li><a href="#">Track My Order</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+      
+                  <div class="footer-section">
+                      <h4>Follow Us</h4>
+                      <div class="social-icons">
+                          <a href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                      <h4>Secured Payment Gateways</h4>
+                      <div class="payment-icons">
+                          <img src="images/pay/pay.png" alt="">
+                      </div>
+                  </div>
+                  </div>
+      
+              
+              </div>
+              <div class="footer-bottom">
+                  <p>&copy; 2024 E-commerce Website. All rights reserved.</p>
+              </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
